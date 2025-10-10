@@ -5,3 +5,7 @@ get_prop(system_server, vendor_wfd_sys_debug_prop)
 
 # Freeform
 add_service(system_server, lmo_freeform_service);
+
+# Webview
+allow system_server webview_zygote:process setsched;
+allow system_server app_zygote:process setsched;
